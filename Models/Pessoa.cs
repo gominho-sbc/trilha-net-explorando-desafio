@@ -2,6 +2,12 @@ namespace DesafioProjetoHospedagem.Models;
 
 public class Pessoa
 {
+    // Propriedades da classe (Acesso controlado aos dados)
+    public string Nome { get; set; }
+    public string Sobrenome { get; set; }
+    public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
+
+    // Construtores (Inicializa o objeto)
     public Pessoa() { }
 
     public Pessoa(string nome)
@@ -15,7 +21,5 @@ public class Pessoa
         Sobrenome = sobrenome;
     }
 
-    public string Nome { get; set; }
-    public string Sobrenome { get; set; }
-    public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
+    
 }
